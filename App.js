@@ -3,15 +3,16 @@ import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import Student from './components/Student';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-
-
-
-
 import Lab1Screen from './components/Home';
 import Bai1 from './Lab/Lab1/Bai1';
 import Bai2 from './Lab/Lab1/Bai2';
 import Bai3Lab1 from './Lab/Lab1/Bai3';
+import Main from './componentss/Main';
+import Lab2Screen from './Lab/Lab2/lab2_home';
+import Lab3Screen from './Lab/Lab3/lab3_home';
+import Move from './Lab/Lab3/Move';
+import Bai2Lab3 from './Lab/Lab3/bai2';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -63,6 +64,24 @@ const App = () => {
         component={Bai3Lab1}
         options={{ title: "Lab 3" }}
       />
+        <Stack.Screen
+          name="lab2React"
+          component={Main}
+          options={{ title: "lab2" }}
+        />
+        
+        <Stack.Screen
+          name="Lab3React"
+          component={Move}
+          options={{ title: "Bai1lab3" }}
+        />
+        <Stack.Screen
+          name="LAb3Bai2React"
+          component={Bai2Lab3}
+          options={{ title: "Bai2lab3" }}
+        />
+        
+        
       {/* Thêm các màn hình cho các lab khác tại đây */}
     </Stack.Navigator>
   </NavigationContainer>
@@ -77,7 +96,7 @@ return (
       onPress={() => navigation.navigate("Lab1")}
     >
       <Text style={styles.menuText}>Lab 1</Text>
-    </TouchableOpacity>
+    </TouchableOpacity>  
     <TouchableOpacity
       style={styles.labMenuItem}
       onPress={() => navigation.navigate("Lab2")}
@@ -95,21 +114,6 @@ return (
 );
 };
 
-const Lab2Screen = () => {
-return (
-  <View style={styles.labScreenContainer}>
-    <Text style={styles.screenText}>Lab 2 Screen</Text>
-  </View>
-);
-};
-
-const Lab3Screen = () => {
-return (
-  <View style={styles.labScreenContainer}>
-    <Text style={styles.screenText}>Lab 3 Screen</Text>
-  </View>
-);
-};
 
 // Thêm các màn hình cho các lab khác tại đây
 
@@ -150,6 +154,8 @@ screenText: {
   fontWeight: "bold",
 },
 });
+
+    
 
 
 export default App;
