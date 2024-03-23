@@ -19,14 +19,7 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    // <View style={styles.container}>
-    //   <Student name="Nguyen Thanh Binh" address="Quang Binh" phone="9999"></Student>
-    //   <Student name="Nguyen Thanh Binh1" address="Quang Binh" phone="9999"></Student>
-    //   <Student name="Nguyen Thanh Binh2" address="Quang Binh" phone="9999"></Student>
-    //   <Student name="Nguyen Thanh Binh3" address="Quang Binh" phone="9999"></Student>
-    // </View>
-    // Lab1
-
+ 
     <NavigationContainer>
     <Stack.Navigator initialRouteName="Menu">
       <Stack.Screen
